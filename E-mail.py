@@ -5,7 +5,7 @@ host = "smtp.gmail.com"
 port = 587
 
 #username from which email is to be sent
-from_email = "Your Enail Address"
+from_email = "Your Email Address"
 password = "Your Password"
 
 #list of emails to which we have to send email
@@ -22,7 +22,7 @@ email_conn.ehlo()
 email_conn.starttls()
 
 #User credentials
-email_conn.login(username, password)
+email_conn.login(from_email, password)
 email_conn.sendmail(from_email, to_email, message)
 
 #Quit Connection
